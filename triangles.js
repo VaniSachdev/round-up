@@ -9,8 +9,8 @@ function setup() {
 
 function draw() {
     clear()
-    if (document.getElementById("angle2").value > 120) {
-        document.getElementById("angle2").value = 120
+    if (document.getElementById("angle2").value >= 120) {
+        document.getElementById("angle2").value = 119
     }
     generate_triangle(60, document.getElementById("angle2").value)
 }
@@ -21,18 +21,18 @@ function get_triangle_type(a1, a2, a3) {
     var num_acute = 0
     angles.forEach(function(item, index, array) {
         if (Math.round(item) == 90) {
-            type = "Right"
+            type = "This is a Right triangle!"
         } else if (item > 90) {
-            type = "Obtuse"
+            type = "This is an Obtuse triangle!"
         } else if (item < 90) {
             num_acute += 1
         }
     })
     if (num_acute == 3) {
-        type = "Acute"
+        type = "This is an Acute triangle!"
     }
     if (angles[0] + angles[1] == 90) {
-        type = "Right"  
+        type = "This is a Right triangle!"  
     }
     
     return type
@@ -52,7 +52,7 @@ function generate_triangle(angle1, angle2) {
         max_height = side_b_length * Math.sin(angle2);
         triangle_last_x = triangle_origin_x - (side_b_length * Math.cos(angle2))
         triangle_last_y = triangle_origin_y - (side_b_length * Math.sin(angle2))
-        base_side_length = base_side_length - 10
+        base_side_length = base_side_length - 5
     }
     if (base_side_length < 100) {
         base_side_length = 100
@@ -72,8 +72,9 @@ function generate_triangle(angle1, angle2) {
     // console.log(triangle_last_y)
     // triangle_last_y = triangle_origin_y - (side_b_length * Math.sin(angle2))
     // }
-    createCanvas(1500, triangle_last_y * 1.5);
+    createCanvas(1500, 1500);
     fill("#accbf4")
+    noStroke()
     triangle(triangle_origin_x, triangle_origin_y, triangle_origin_x + base_side_length, triangle_origin_y, triangle_last_x, triangle_last_y)
     // console.log(degrees(angle1))
     // console.log(degrees(angle2))
