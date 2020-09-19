@@ -39,11 +39,11 @@ function isMouseOnPizza() {
 }
 
 function getDenominator() {
-    return parseInt(document.getElementById("denominator2").value)
+    return parseInt(document.getElementById("denominator").value)
 }
 
 function getNumerator() {
-    return parseInt(document.getElementById("numerator2").value)
+    return parseInt(document.getElementById("numerator").value)
 }
 
 
@@ -75,13 +75,7 @@ function draw() {
     drawFilled();
     drawRects();
     drawPizzaCuts();
-    updateFraction();
-}
-
-
-function updateFraction() {
-    document.getElementById("numerator2").value = getNumerator();
-    document.getElementById("denominator2").value = getDenominator();
+    // updateFraction();
 }
 
 
