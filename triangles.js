@@ -81,3 +81,6 @@ function generate_triangle(angle1, angle2) {
     // console.log(Math.round(degrees(angle3)))
     document.getElementById("type").innerText = get_triangle_type(angle1, angle2, angle3)
 }
+
+// Explanation: A visualizer for obtuse, acute, and right triangles. Students can change one of the angles in a triangle to see the difference between different kinds of triangles. 
+// Rules: Change the angle in the input box. Remember that angles can't be negative, And since one of the angles is locked at 60 degrees and there are 180 degrees in a triangle, you can't input a number greater than 120 in the input box.
