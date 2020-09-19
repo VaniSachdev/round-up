@@ -38,7 +38,7 @@ function get_triangle_type(a1, a2, a3) {
 function generate_triangle(angle1, angle2) {
     var triangle_origin_x = 300
     var triangle_origin_y = 300
-    var base_side_length = 400
+    var base_side_length = 100
     var angle3 = radians(180 - (angle1 + angle2))
     angle1 = radians(angle1)
     angle2 = radians(angle2)
@@ -59,16 +59,16 @@ function generate_triangle(angle1, angle2) {
         triangle_last_y = triangle_origin_y - (side_b_length * Math.sin(angle2))
         
     }
-    if (triangle_last_x < 0 || triangle_last_x > 1000 || triangle_last_y < 0 || triangle_last_y > 1000) {
-        var temp = angle1
-        angle1 = angle2
-        angle2 = temp
-        side_b_length = (base_side_length * Math.sin(angle1))/Math.sin(angle3)
-        max_height = side_b_length * Math.sin(angle2);
-        triangle_last_x = triangle_origin_x - (side_b_length * Math.cos(angle2))
-        console.log(triangle_last_y)
-        triangle_last_y = triangle_origin_y - (side_b_length * Math.sin(angle2))
-    }
+    // if (triangle_last_x < 0 || triangle_last_x > 1000 || triangle_last_y < 0 || triangle_last_y > 1000) {
+    var temp = angle1
+    angle1 = angle2
+    angle2 = temp
+    side_b_length = (base_side_length * Math.sin(angle1))/Math.sin(angle3)
+    max_height = side_b_length * Math.sin(angle2);
+    triangle_last_x = triangle_origin_x - (side_b_length * Math.cos(angle2))
+    console.log(triangle_last_y)
+    triangle_last_y = triangle_origin_y - (side_b_length * Math.sin(angle2))
+    // }
     fill("#accbf4")
     triangle(triangle_origin_x, triangle_origin_y, triangle_origin_x + base_side_length, triangle_origin_y, triangle_last_x, triangle_last_y)
     // console.log(degrees(angle1))
