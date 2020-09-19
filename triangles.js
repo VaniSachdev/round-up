@@ -3,13 +3,16 @@ const HEIGHT = 1000;
 
 function setup() {
     console.log("setup");
-    createCanvas(WIDTH, HEIGHT);
+    // createCanvas(WIDTH, HEIGHT);
     // noStroke();
 }
 
 function draw() {
     clear()
-    generate_triangle(document.getElementById("angle1").value, document.getElementById("angle2").value)
+    if (document.getElementById("angle2").value > 120) {
+        document.getElementById("angle2").value = 120
+    }
+    generate_triangle(60, document.getElementById("angle2").value)
 }
 
 function get_triangle_type(a1, a2, a3) {
@@ -37,8 +40,8 @@ function get_triangle_type(a1, a2, a3) {
 }
 function generate_triangle(angle1, angle2) {
     var triangle_origin_x = 300
-    var triangle_origin_y = 300
-    var base_side_length = 100
+    var triangle_origin_y = 100
+    var base_side_length = 300
     var angle3 = radians(180 - (angle1 + angle2))
     angle1 = radians(angle1)
     angle2 = radians(angle2)
@@ -60,19 +63,20 @@ function generate_triangle(angle1, angle2) {
         
     }
     // if (triangle_last_x < 0 || triangle_last_x > 1000 || triangle_last_y < 0 || triangle_last_y > 1000) {
-    var temp = angle1
-    angle1 = angle2
-    angle2 = temp
-    side_b_length = (base_side_length * Math.sin(angle1))/Math.sin(angle3)
-    max_height = side_b_length * Math.sin(angle2);
-    triangle_last_x = triangle_origin_x - (side_b_length * Math.cos(angle2))
-    console.log(triangle_last_y)
-    triangle_last_y = triangle_origin_y - (side_b_length * Math.sin(angle2))
+    // var temp = angle1
+    // angle1 = angle2
+    // angle2 = temp
+    // side_b_length = (base_side_length * Math.sin(angle1))/Math.sin(angle3)
+    // max_height = side_b_length * Math.sin(angle2);
+    // triangle_last_x = triangle_origin_x - (side_b_length * Math.cos(angle2))
+    // console.log(triangle_last_y)
+    // triangle_last_y = triangle_origin_y - (side_b_length * Math.sin(angle2))
     // }
+    createCanvas(1500, triangle_last_y * 1.5);
     fill("#accbf4")
     triangle(triangle_origin_x, triangle_origin_y, triangle_origin_x + base_side_length, triangle_origin_y, triangle_last_x, triangle_last_y)
     // console.log(degrees(angle1))
     // console.log(degrees(angle2))
-    console.log(Math.round(degrees(angle3)))
+    // console.log(Math.round(degrees(angle3)))
     document.getElementById("type").innerText = get_triangle_type(angle1, angle2, angle3)
 }
