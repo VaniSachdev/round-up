@@ -71,6 +71,13 @@ function draw() {
     drawFilled();
     drawRects();
     drawPizzaCuts();
+    updateFraction();
+}
+
+
+function updateFraction() {
+    document.getElementById("numerator2").value = getNumerator();
+    document.getElementById("denominator2").value = getDenominator();
 }
 
 
@@ -163,7 +170,6 @@ function updateFilledRects() {
     circleGoalX = (numerator * RECT_WIDTH) + LEFT_RECT_EDGE;
     if (getSlicesSelected() != denominator - numerator) {
         correctSlices(getSlicesSelected() - (denominator - numerator));
-        console.log("hi");
     }
 }
 
