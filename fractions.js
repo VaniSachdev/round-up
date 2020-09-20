@@ -71,10 +71,10 @@ function draw() {
     } else {
         updateFilledRects();
     }
-    updateCircle();
     drawFilled();
     drawRects();
     drawPizzaCuts();
+    updateCircle();
     // updateFraction();
 }
 
