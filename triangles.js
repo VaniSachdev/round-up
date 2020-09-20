@@ -75,9 +75,6 @@ function generate_triangle(angle1, angle2) {
     canvas.parent('sketch-holder');
     fill("#accbf4")
     noStroke()
-    // if (base_side_length == 50) {
-    //     triangle_origin_x = 800
-    // }
     triangle(triangle_origin_x, triangle_origin_y, triangle_origin_x + base_side_length, triangle_origin_y, triangle_last_x, triangle_last_y)
     document.getElementById("type").innerText = get_triangle_type(angle1, angle2, angle3)
 }
