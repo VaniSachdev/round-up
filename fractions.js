@@ -183,7 +183,7 @@ function updateNumRects() {
             denominator = 1;
         }
         RECT_WIDTH = BAR_WIDTH/denominator;
-        // updateCircleGoal();
+        updateCircleGoal();
     }
     
     
