@@ -15,6 +15,12 @@ const TOP_RECT_EDGE = VERTICAL_MARGIN;
 const PIZZA_X = WIDTH/2;
 const PIZZA_Y = HEIGHT - (PIZZA_HEIGHT/2 + VERTICAL_MARGIN);
 
+function setup() {
+    var canvas = createCanvas(WIDTH, HEIGHT);
+    canvas.parent("sketch-holder")
+    
+}
+
 function bound(x, min, max) {
     return x > min ? (x < max ? x : max) : min;
 }
@@ -56,9 +62,7 @@ for (let i = 0; i < BAR_WIDTH/10; i++) {
     selectedSlices.push(false);
 }
 
-function setup() {
-    createCanvas(WIDTH, HEIGHT);
-}
+
 
 function draw() {
     background(255);
