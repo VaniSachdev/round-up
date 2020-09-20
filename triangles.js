@@ -6,8 +6,6 @@ function setup() {
     console.log("setup");
 
     var canvas = createCanvas(1000, HEIGHT);
-    
-    // Move the canvas so it’s inside our <div id="sketch-holder">.
     canvas.parent('sketch-holder');
 
    
@@ -16,8 +14,12 @@ function setup() {
 
 function draw() {
     clear()
-    if (document.getElementById("angle2").value >= 120) {
-        document.getElementById("angle2").value = 119
+    if (document.getElementById("angle2").value >= 112) {
+        document.getElementById("angle2").value = 112
+    }
+
+    if (document.getElementById("angle2").value <= 0) {
+        document.getElementById("angle2").value = 1
     }
     generate_triangle(60, document.getElementById("angle2").value)
 }
@@ -69,28 +71,17 @@ function generate_triangle(angle1, angle2) {
         triangle_last_y = triangle_origin_y - (side_b_length * Math.sin(angle2))
         
     }
-    // if (triangle_last_x < 0 || triangle_last_x > 1000 || triangle_last_y < 0 || triangle_last_y > 1000) {
-    // var temp = angle1
-    // angle1 = angle2
-    // angle2 = temp
-    // side_b_length = (base_side_length * Math.sin(angle1))/Math.sin(angle3)
-    // max_height = side_b_length * Math.sin(angle2);
-    // triangle_last_x = triangle_origin_x - (side_b_length * Math.cos(angle2))
-    // console.log(triangle_last_y)
-    // triangle_last_y = triangle_origin_y - (side_b_length * Math.sin(angle2))
-    // }
-
+    var canvas = createCanvas(1000, HEIGHT );
+    canvas.parent('sketch-holder');
     fill("#accbf4")
     noStroke()
+    // if (base_side_length == 50) {
+    //     triangle_origin_x = 800
+    // }
     triangle(triangle_origin_x, triangle_origin_y, triangle_origin_x + base_side_length, triangle_origin_y, triangle_last_x, triangle_last_y)
-    // console.log(degrees(angle1))
-    // console.log(degrees(angle2))
-    // console.log(Math.round(degrees(angle3)))
     document.getElementById("type").innerText = get_triangle_type(angle1, angle2, angle3)
 }
 
 
 
 
-// Explanation: A visualizer for obtuse, acute, and right triangles. Students can change one of the angles in a triangle to see the difference between different kinds of triangles. 
-// Rules: Change the angle in the input box. Remember that angles can't be negative, And since one of the angles is locked at 60 degrees and there are 180 degrees in a triangle, you can't input a number greater than 120 in the input box.
