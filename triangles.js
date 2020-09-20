@@ -1,11 +1,11 @@
 const WIDTH = 1000;
-const HEIGHT = 1000;
+const HEIGHT = 300;
 
 
 function setup() {
     console.log("setup");
 
-    var canvas = createCanvas(100, 100);
+    var canvas = createCanvas(1000, HEIGHT);
     
     // Move the canvas so it’s inside our <div id="sketch-holder">.
     canvas.parent('sketch-holder');
@@ -47,8 +47,8 @@ function get_triangle_type(a1, a2, a3) {
 }
 function generate_triangle(angle1, angle2) {
     var triangle_origin_x = 300
-    var triangle_origin_y = 100
-    var base_side_length = 300
+    var triangle_origin_y = 0
+    var base_side_length = 200
     var angle3 = radians(180 - (angle1 + angle2))
     angle1 = radians(angle1)
     angle2 = radians(angle2)
@@ -59,10 +59,10 @@ function generate_triangle(angle1, angle2) {
         max_height = side_b_length * Math.sin(angle2);
         triangle_last_x = triangle_origin_x - (side_b_length * Math.cos(angle2))
         triangle_last_y = triangle_origin_y - (side_b_length * Math.sin(angle2))
-        base_side_length = base_side_length - 5
+        base_side_length = base_side_length - 5    
     }
     if (base_side_length < 100) {
-        base_side_length = 100
+        base_side_length = 50
         side_b_length = (base_side_length * Math.sin(angle1))/Math.sin(angle3)
         max_height = side_b_length * Math.sin(angle2);
         triangle_last_x = triangle_origin_x - (side_b_length * Math.cos(angle2))
