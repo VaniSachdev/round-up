@@ -13,6 +13,9 @@
 
   <style type="text/css">
 
+
+
+
     .hidden.menu {
       display: none;
     }
@@ -22,6 +25,11 @@
 
     .footer {
       background-color: rgb(172, 203, 244) !important;
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      margin-bottom: 0px;
     }
 
     .masthead.segment {
@@ -130,16 +138,23 @@
 </div>
 
 
-<div>
-  <input type="number" id="angle2" value = "60">
-  <canvas id="mycanvas"></canvas>
-  <h2 id = "type">Angle</h2>
+<div class="ui one column stackable center aligned page grid">
+  <div class="column twelve wide">
+      <p> Change the angle in the input box! Remember that angles can't be negative, and since one of the angles is locked at 60 degrees and there are 180 degrees in a triangle, you can't input a number greater than 120 in the input box.</p>
+      <canvas class = "ui one column center alligned page grid"> hi</canvas>
+      <p></p>
+      <input type="number" id="angle2" value = "60">
+
+      <h2 id = "type" class = "ui blue medium header" >Angle</h2>
+      <pr></pr>
+    </div>
 </div>
+
 
 
   <div class="ui inverted vertical footer segment">
     <div class="ui container">
-   
+      
         <div class="seven wide column">
           <p class="ui inverted header"> Hack Mit 2020</p>
           <h5 class="ui header"> Dylan Barva  &nbsp;&nbsp; <a href = "https://github.com/DylanB5402"><i class="github icon"></i> </a> <a href = "https://www.linkedin.com/in/dylan-barva-85a108176/"> <i class="linkedin icon"></i> </a> |  &nbsp;&nbsp; Vani Sachdev  &nbsp;&nbsp; <a href = "https://github.com/VaniSachdev"><i class="github icon"></i> </a> <a href = "https://www.linkedin.com/in/vani-sachdev-7a5576178/"> <i class="linkedin icon"></i> </a> |   &nbsp;&nbsp; Duncan Wedig  &nbsp;&nbsp; <a href = "https://github.com/duncanwedig"><i class="github icon"></i> </a> <a href = "https://www.linkedin.com/in/duncan-wedig-8aa108176/"> <i class="linkedin icon"></i> </a></h5>

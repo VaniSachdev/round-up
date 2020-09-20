@@ -1,10 +1,9 @@
 const WIDTH = 1000;
 const HEIGHT = 1000;
 
+
 function setup() {
     console.log("setup");
-    // createCanvas(WIDTH, HEIGHT);
-    // noStroke();
 }
 
 function draw() {
@@ -72,7 +71,7 @@ function generate_triangle(angle1, angle2) {
     // console.log(triangle_last_y)
     // triangle_last_y = triangle_origin_y - (side_b_length * Math.sin(angle2))
     // }
-    createCanvas(1500, 1500);
+    createCanvas(1000, 1000);
     fill("#accbf4")
     noStroke()
     triangle(triangle_origin_x, triangle_origin_y, triangle_origin_x + base_side_length, triangle_origin_y, triangle_last_x, triangle_last_y)
