@@ -8,13 +8,8 @@
   <!-- Site Properties -->
   <title> Round Up: Terrific Traingles </title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-  
-
 
   <style type="text/css">
-
-
-
 
     .hidden.menu {
       display: none;
@@ -25,11 +20,6 @@
 
     .footer {
       background-color: rgb(172, 203, 244) !important;
-      position: fixed;
-      bottom: 0px;
-      left: 0px;
-      right: 0px;
-      margin-bottom: 0px;
     }
 
     .masthead.segment {
@@ -114,10 +104,9 @@
 
   </style>
 
-<!-- <script src= "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"> </script> -->
+<script src= "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"> </script>
 <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
-<script src="../triangles.js"></script>
+<script type="text/javascript" src="../fractions.js"></script>
    
 </head>
 
@@ -129,36 +118,38 @@
       <div class="ui large secondary menu">
         <a class="item" href = "../index.html" >Home</a>
         <a class="item" href = "visualize.html">Visualize</a>
+    
       </div>
     </div>
     <div class="ui text container">
-      <h1 class="ui blue medium header"> Terrific Triangles!</h1>
+      <h1 class="ui blue medium header"> Funky Fractions!</h1>
     </div>
   </div>
 </div>
 
-
+<div class = container>
 <div class="ui one column stackable center aligned page grid">
   <div class="column twelve wide">
-      <p> Change the angle in the input box! Remember that angles can't be negative, and since one of the angles is locked at 60 degrees and there are 180 degrees in a triangle, you can't input a number greater than 120 in the input box.</p>
-    
-      <div id="sketch-holder">
-        <canvas id="sketch-holder"></canvas>
-      </div>
-  
-      <p></p>
-      <input type="number" id="angle2" value = "60">
-
-      <h2 id = "type" class = "ui blue medium header" >Angle</h2>
-      <pr></pr>
-    </div>
+    <p id="fractions-text">Welcome to Funky Fractions! Here you can explore how changing the two numbers in a fraction 
+      (known as the <i>numerator</i> and <i>denominator</i>) changes the size of the fraction! 
+      You might notice that the big rectangle is made up of smaller rectangles. See what happens when you drag around the rectangles or change 
+      how many rectangles the big rectangle has in it! How does the size of the red rectangles put together compare to the size of the large bar?</p>
+  <p>numerator:</p>
+  <input id="numerator" value="5">
+  <p>denominator:</p>
+  <input id="denominator" value="10">
+  <div>
+    <canvas id="mycanvas"></canvas>
+  </div>
+  </div>
+</div>
 </div>
 
 
 
   <div class="ui inverted vertical footer segment">
     <div class="ui container">
-      
+   
         <div class="seven wide column">
           <p class="ui inverted header"> Hack Mit 2020</p>
           <h5 class="ui header"> Dylan Barva  &nbsp;&nbsp; <a href = "https://github.com/DylanB5402"><i class="github icon"></i> </a> <a href = "https://www.linkedin.com/in/dylan-barva-85a108176/"> <i class="linkedin icon"></i> </a> |  &nbsp;&nbsp; Vani Sachdev  &nbsp;&nbsp; <a href = "https://github.com/VaniSachdev"><i class="github icon"></i> </a> <a href = "https://www.linkedin.com/in/vani-sachdev-7a5576178/"> <i class="linkedin icon"></i> </a> |   &nbsp;&nbsp; Duncan Wedig  &nbsp;&nbsp; <a href = "https://github.com/duncanwedig"><i class="github icon"></i> </a> <a href = "https://www.linkedin.com/in/duncan-wedig-8aa108176/"> <i class="linkedin icon"></i> </a></h5>
