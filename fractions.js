@@ -39,11 +39,11 @@ function isMouseOnPizza() {
 }
 
 function getDenominator() {
-    return parseInt(document.getElementById("denominator").value)
+    return parseInt(document.getElementById("denominator2").value)
 }
 
 function getNumerator() {
-    return parseInt(document.getElementById("numerator").value)
+    return parseInt(document.getElementById("numerator2").value)
 }
 
 
